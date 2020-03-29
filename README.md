@@ -36,16 +36,16 @@ Create a Java app that uses the DAO pattern to perform CRUD operations on you sq
 
 These classes should include:
 
-1. A DAO abstract class or interface for the following methods
+1. A DAO abstract class or models for the following methods
     * public T findById(int id);
     * public List<T> findAll();
     * public T update(T dto);
     * public T create(T dto);
     * public  void delete(int id);
-2. A DAO concrete class that implements all the methods of the abstract or interface from the previous step
-3. A DTO interface with the following method stub
+2. A DAO concrete class that implements all the methods of the abstract or models from the previous step
+3. A DTO models with the following method stub
     * int getId();
-4. A concrete DTO class that implements the interface.
+4. A concrete DTO class that implements the models.
 
 ## Run the App
 Create an App runner class to run each CRUD operation against your DAO
