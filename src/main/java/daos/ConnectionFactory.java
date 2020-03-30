@@ -8,7 +8,7 @@ import java.sql.SQLException;
     public class ConnectionFactory {
         public static final String URL = "jdbc:mysql://localhost:3306/myCar?serverTimezone=UTC";
         public static final String USER = "root";
-        public static final String PASS = "Knightknight90";
+        public static final String PASS = "test";
         /**
          * Get a connection to database
          * @return Connection object
