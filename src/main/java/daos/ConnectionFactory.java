@@ -1,14 +1,14 @@
 package daos;
 
-import com.mysql.jdbc.Driver;
+import com.mysql.cj.jdbc.Driver;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
     public class ConnectionFactory {
-        public static final String URL = "jdbc:mysql://localhost:3306/testdb";
+        public static final String URL = "jdbc:mysql://localhost:3306/myCar?serverTimezone=UTC";
         public static final String USER = "root";
-        public static final String PASS = "testpass";
+        public static final String PASS = "Knightknight90";
         /**
          * Get a connection to database
          * @return Connection object

@@ -43,7 +43,7 @@ public class DAO implements DAOInterface {
             PreparedStatement ps = connection.prepareStatement("UPDATE car SET make=?, model=?, year=?, color=?, vin=? WHERE id=?");
             ps.setString(1, dto.getMake());
             ps.setString(2, dto.getModel());
-            ps.setInt(3,dto.getYear();
+            ps.setInt(3,dto.getYear());
             ps.setString(4, dto.getColor());
             ps.setInt(5, dto.getVin());
             ps.setInt(6, dto.getId());
