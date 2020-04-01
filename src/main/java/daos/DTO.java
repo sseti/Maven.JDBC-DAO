@@ -9,7 +9,7 @@ public class DTO implements DTOInterface {
     private String color;
     private int vin;
 
-    public DTO(Integer id, String make, String model, Integer year, String color, int vin) {
+    public DTO(int id, String make, String model, int year, String color, int vin) {
         this.id = id;
         this.make = make;
         this.model = model;
@@ -26,7 +26,7 @@ public class DTO implements DTOInterface {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -46,11 +46,11 @@ public class DTO implements DTOInterface {
         this.model = model;
     }
 
-    public Integer getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -62,11 +62,11 @@ public class DTO implements DTOInterface {
         this.color = color;
     }
 
-    public Integer getVin() {
+    public int getVin() {
         return vin;
     }
 
-    public void setVin(Integer vin) {
+    public void setVin(int vin) {
         this.vin = vin;
     }
 }

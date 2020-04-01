@@ -9,7 +9,7 @@ public class DAO implements DAOInterface {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM car WHERE id=" + id);
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Car WHERE id=" + id);
             if(rs.next()){
                 return extractDTOfromResultSet(rs);
             }
@@ -24,7 +24,7 @@ public class DAO implements DAOInterface {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM car");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Car");
             List users = new ArrayList<DTO>();
             while(rs.next()){
                 DTO user = extractDTOfromResultSet(rs);
@@ -60,7 +60,7 @@ public class DAO implements DAOInterface {
     public Boolean create(DTO dto) {
         Connection connection = ConnectionFactory.getConnection();
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO car VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO Car VALUES (?, ?, ?, ?, ?, ?)");
             ps.setInt(1, dto.getId());
             ps.setString(2, dto.getMake());
             ps.setString(3, dto.getModel());
@@ -83,7 +83,7 @@ public class DAO implements DAOInterface {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
-            int i = stmt.executeUpdate("DELETE FROM people WHERE id=" + id);
+            int i = stmt.executeUpdate("DELETE FROM Car WHERE id=" + id);
             if(i == 1) {
                 return true;
             }
@@ -105,3 +105,5 @@ public class DAO implements DAOInterface {
         return user;
     }
 }
+
+
